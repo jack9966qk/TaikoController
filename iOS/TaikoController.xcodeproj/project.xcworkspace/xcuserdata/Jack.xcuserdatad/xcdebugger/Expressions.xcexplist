@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ViewController.leftDon(UIButton) -&gt; ():ViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.sendCommand(command : TaikoCommand) -&gt; ():ViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.(sendCommand(command : TaikoCommand) -&gt; ()).(closure #1):ViewController.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
