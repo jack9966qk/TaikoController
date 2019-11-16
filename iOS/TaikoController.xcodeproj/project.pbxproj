@@ -14,7 +14,6 @@
 		0431B1F51DDEFCAF007D7E5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0431B1F31DDEFCAF007D7E5B /* LaunchScreen.storyboard */; };
 		0431B2001DDEFCAF007D7E5B /* TaikoControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431B1FF1DDEFCAF007D7E5B /* TaikoControllerTests.swift */; };
 		0431B20B1DDEFCAF007D7E5B /* TaikoControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431B20A1DDEFCAF007D7E5B /* TaikoControllerUITests.swift */; };
-		0431B2261DDEFD46007D7E5B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0431B21C1DDEFD46007D7E5B /* Info.plist */; };
 		0431B2271DDEFD46007D7E5B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0431B21C1DDEFD46007D7E5B /* Info.plist */; };
 		0431B2281DDEFD47007D7E5B /* PTChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0431B2201DDEFD46007D7E5B /* PTChannel.m */; };
 		0431B2291DDEFD47007D7E5B /* PTChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0431B2201DDEFD46007D7E5B /* PTChannel.m */; };
@@ -301,7 +300,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0431B2261DDEFD46007D7E5B /* Info.plist in Resources */,
 				0431B1F51DDEFCAF007D7E5B /* LaunchScreen.storyboard in Resources */,
 				0431B1F21DDEFCAF007D7E5B /* Assets.xcassets in Resources */,
 				0431B1F01DDEFCAF007D7E5B /* Main.storyboard in Resources */,

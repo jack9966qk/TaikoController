@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Taiko View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TaikoViewController" customModule="TaikoController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CfS-Os-DHO" userLabel="LKa" customClass="UIAnimatedView" customModule="TaikoController" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="683" height="1004"/>
+                                <color key="backgroundColor" red="0.81167572736740112" green="0.81181591749191284" blue="0.81166690587997437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="idleColor">
+                                        <color key="value" red="0.76716624150000001" green="0.76716624150000001" blue="0.76716624150000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                        <color key="value" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="stH-kL-ooB" appends="YES" id="8bC-G6-zSW"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZr-lm-2Rm" userLabel="RKa" customClass="UIAnimatedView" customModule="TaikoController" customModuleProvider="target">
+                                <rect key="frame" x="683" y="20" width="683" height="1004"/>
+                                <color key="backgroundColor" red="0.76716624149659862" green="0.76716624149659862" blue="0.76716624149659862" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                        <color key="value" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="idleColor">
+                                        <color key="value" red="0.76716624149659862" green="0.76716624149659862" blue="0.76716624149659862" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="M6m-Ge-en7" appends="YES" id="vGn-eq-M2U"/>
+                                </connections>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SrY-s5-Ly0" userLabel="LDon" customClass="UICircularView" customModule="TaikoController" customModuleProvider="target">
+                                <rect key="frame" x="136.5" y="429.5" width="546.5" height="1093.5"/>
+                                <color key="backgroundColor" red="0.9602144279" green="0.89659274079999995" blue="0.68122355430000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SrY-s5-Ly0" secondAttribute="height" multiplier="1:2" id="QRa-Sz-uKF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="flip" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="name" value="LDon"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="idleColor">
+                                        <color key="value" red="0.9602144279" green="0.89659274079999995" blue="0.68122355430000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="a2X-Gw-vSw" appends="YES" id="RlE-qj-hNm"/>
+                                </connections>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dur-ce-7GB" userLabel="RDon" customClass="UICircularView" customModule="TaikoController" customModuleProvider="target">
+                                <rect key="frame" x="683" y="429.5" width="546.5" height="1094.5"/>
+                                <color key="backgroundColor" red="0.9602144279" green="0.89659274079999995" blue="0.68122355430000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Dur-ce-7GB" secondAttribute="height" multiplier="1:2" id="Cir-wX-bjm"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="flip" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="name" value="RDon"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="idleColor">
+                                        <color key="value" red="0.9602144279" green="0.89659274079999995" blue="0.68122355430000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="x3l-1n-XlB" appends="YES" id="G25-zm-9g5"/>
+                                </connections>
+                            </view>
+                            <view hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EoC-ic-ZVC" userLabel="TopSpace">
+                                <rect key="frame" x="20" y="20" width="1326" height="409.5"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.07871226615646254" alpha="0.0" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J4h-M4-5UG" userLabel="LeftSpace">
+                                <rect key="frame" x="20" y="20" width="116.5" height="1004"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.078712266160000002" alpha="0.0" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HH2-fT-Ugk" userLabel="RightSpace">
+                                <rect key="frame" x="1229.5" y="20" width="116.5" height="1004"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.078712266160000002" alpha="0.0" colorSpace="calibratedRGB"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LiD-Io-hOp">
+                                <rect key="frame" x="0.0" y="20" width="1366" height="44"/>
+                                <items>
+                                    <navigationItem id="JtD-W4-vUR">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="ghs-JH-35n">
+                                            <connections>
+                                                <action selector="buttonHit:" destination="BYZ-38-t0r" id="HtO-cd-YrZ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SrY-s5-Ly0" firstAttribute="leading" secondItem="J4h-M4-5UG" secondAttribute="trailing" id="2wr-PF-RIP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="J4h-M4-5UG" secondAttribute="bottom" id="4g9-Sq-QiE"/>
+                            <constraint firstItem="CfS-Os-DHO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5M8-Mo-EHV"/>
+                            <constraint firstItem="SrY-s5-Ly0" firstAttribute="width" secondItem="Dur-ce-7GB" secondAttribute="width" id="6BO-ow-sMt"/>
+                            <constraint firstItem="LiD-Io-hOp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="BGK-xZ-86E"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YZr-lm-2Rm" secondAttribute="bottom" id="Bna-dx-J6d"/>
+                            <constraint firstItem="SrY-s5-Ly0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="Csi-UN-ueI"/>
+                            <constraint firstItem="YZr-lm-2Rm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IFD-9D-9rM"/>
+                            <constraint firstItem="EoC-ic-ZVC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="NgE-ZP-Gvj"/>
+                            <constraint firstItem="HH2-fT-Ugk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NnE-Br-0cA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YZr-lm-2Rm" secondAttribute="trailing" constant="-20" id="Qkm-bQ-Z9x"/>
+                            <constraint firstItem="SrY-s5-Ly0" firstAttribute="top" secondItem="EoC-ic-ZVC" secondAttribute="bottom" id="X5L-Hh-wKc"/>
+                            <constraint firstItem="HH2-fT-Ugk" firstAttribute="leading" secondItem="Dur-ce-7GB" secondAttribute="trailing" id="Xvp-me-1ay"/>
+                            <constraint firstAttribute="trailing" secondItem="LiD-Io-hOp" secondAttribute="trailing" id="YHz-Hl-9G7"/>
+                            <constraint firstItem="EoC-ic-ZVC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="Zzz-af-vbw"/>
+                            <constraint firstItem="YZr-lm-2Rm" firstAttribute="leading" secondItem="CfS-Os-DHO" secondAttribute="trailing" id="acp-77-1Be"/>
+                            <constraint firstItem="EoC-ic-ZVC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cZm-V7-Fbj"/>
+                            <constraint firstItem="J4h-M4-5UG" firstAttribute="width" secondItem="HH2-fT-Ugk" secondAttribute="width" id="cwu-Yt-baH"/>
+                            <constraint firstItem="HH2-fT-Ugk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="e2u-ah-9l3"/>
+                            <constraint firstItem="CfS-Os-DHO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="m4C-1o-osf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HH2-fT-Ugk" secondAttribute="bottom" id="mln-Kk-iU5"/>
+                            <constraint firstItem="J4h-M4-5UG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="o5r-v0-IOd"/>
+                            <constraint firstItem="Dur-ce-7GB" firstAttribute="leading" secondItem="SrY-s5-Ly0" secondAttribute="trailing" id="olL-aP-7AL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CfS-Os-DHO" secondAttribute="bottom" id="pNP-tH-Lxc"/>
+                            <constraint firstItem="EoC-ic-ZVC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="pax-Ja-FDG"/>
+                            <constraint firstItem="CfS-Os-DHO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wfW-IZ-R0x"/>
+                            <constraint firstItem="J4h-M4-5UG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="yXW-0P-zHx"/>
+                            <constraint firstItem="Dur-ce-7GB" firstAttribute="top" secondItem="EoC-ic-ZVC" secondAttribute="bottom" id="zWj-dx-bhv"/>
+                            <constraint firstItem="LiD-Io-hOp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zhA-Bk-rBb"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="LDonView" destination="SrY-s5-Ly0" id="1Yg-P1-VVg"/>
+                        <outlet property="LKaView" destination="CfS-Os-DHO" id="ulf-CV-LEG"/>
+                        <outlet property="RDonView" destination="Dur-ce-7GB" id="Vla-P0-WOG"/>
+                        <outlet property="RKaView" destination="YZr-lm-2Rm" id="WTw-fe-dk7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <gestureRecognizer id="x3l-1n-XlB" userLabel="RDon Recognizer" customClass="TouchDownRecognizer" customModule="TaikoController" customModuleProvider="target">
+                    <connections>
+                        <action selector="rightDon:" destination="BYZ-38-t0r" id="Lvl-9i-Yf2"/>
+                    </connections>
+                </gestureRecognizer>
+                <gestureRecognizer id="M6m-Ge-en7" userLabel="RKa Recognizer" customClass="TouchDownRecognizer" customModule="TaikoController" customModuleProvider="target">
+                    <connections>
+                        <action selector="rightKa:" destination="BYZ-38-t0r" id="0Zs-Vc-gZu"/>
+                    </connections>
+                </gestureRecognizer>
+                <gestureRecognizer id="a2X-Gw-vSw" userLabel="LDon Recognizer" customClass="TouchDownRecognizer" customModule="TaikoController" customModuleProvider="target">
+                    <connections>
+                        <action selector="leftDon:" destination="BYZ-38-t0r" id="gLs-wA-fZA"/>
+                    </connections>
+                </gestureRecognizer>
+                <gestureRecognizer id="stH-kL-ooB" userLabel="LKa Recognizer" customClass="TouchDownRecognizer" customModule="TaikoController" customModuleProvider="target">
+                    <connections>
+                        <action selector="leftKa:" destination="BYZ-38-t0r" id="Eee-qr-1QI"/>
+                    </connections>
+                </gestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="137.04245973645681" y="138.28125"/>
+        </scene>
+    </scenes>
+</document>
