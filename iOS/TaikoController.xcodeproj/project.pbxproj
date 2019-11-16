@@ -12,45 +12,17 @@
 		0431B1F01DDEFCAF007D7E5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0431B1EE1DDEFCAF007D7E5B /* Main.storyboard */; };
 		0431B1F21DDEFCAF007D7E5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0431B1F11DDEFCAF007D7E5B /* Assets.xcassets */; };
 		0431B1F51DDEFCAF007D7E5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0431B1F31DDEFCAF007D7E5B /* LaunchScreen.storyboard */; };
-		0431B2001DDEFCAF007D7E5B /* TaikoControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431B1FF1DDEFCAF007D7E5B /* TaikoControllerTests.swift */; };
-		0431B20B1DDEFCAF007D7E5B /* TaikoControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431B20A1DDEFCAF007D7E5B /* TaikoControllerUITests.swift */; };
-		0431B2271DDEFD46007D7E5B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0431B21C1DDEFD46007D7E5B /* Info.plist */; };
 		0431B2281DDEFD47007D7E5B /* PTChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0431B2201DDEFD46007D7E5B /* PTChannel.m */; };
-		0431B2291DDEFD47007D7E5B /* PTChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0431B2201DDEFD46007D7E5B /* PTChannel.m */; };
 		0431B22A1DDEFD47007D7E5B /* PTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 0431B2231DDEFD46007D7E5B /* PTProtocol.m */; };
-		0431B22B1DDEFD47007D7E5B /* PTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 0431B2231DDEFD46007D7E5B /* PTProtocol.m */; };
 		0431B22C1DDEFD47007D7E5B /* PTUSBHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 0431B2251DDEFD46007D7E5B /* PTUSBHub.m */; };
-		0431B22D1DDEFD47007D7E5B /* PTUSBHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 0431B2251DDEFD46007D7E5B /* PTUSBHub.m */; };
 		0431B2301DDF08AC007D7E5B /* TaikoCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431B22F1DDF08AC007D7E5B /* TaikoCommand.swift */; };
-		0431B2311DDF08AC007D7E5B /* TaikoCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431B22F1DDF08AC007D7E5B /* TaikoCommand.swift */; };
 		0431B2331DDF15A7007D7E5B /* TaikoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431B2321DDF15A7007D7E5B /* TaikoProtocol.swift */; };
-		0431B2341DDF15A7007D7E5B /* TaikoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431B2321DDF15A7007D7E5B /* TaikoProtocol.swift */; };
 		0437E6E21DE69330003F3589 /* UICircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437E6E11DE69330003F3589 /* UICircularView.swift */; };
-		0437E6E31DE69330003F3589 /* UICircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437E6E11DE69330003F3589 /* UICircularView.swift */; };
 		0452E93D1E19376F00172113 /* HitTestUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452E93C1E19376F00172113 /* HitTestUIView.swift */; };
 		04642C201DE06CF400FBF6BA /* SendCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 04642C1F1DE06CF400FBF6BA /* SendCommand.m */; };
-		04642C211DE06CF400FBF6BA /* SendCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 04642C1F1DE06CF400FBF6BA /* SendCommand.m */; };
 		04642C231DE1248500FBF6BA /* TouchDownRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C221DE1248500FBF6BA /* TouchDownRecognizer.swift */; };
-		04642C241DE1248500FBF6BA /* TouchDownRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C221DE1248500FBF6BA /* TouchDownRecognizer.swift */; };
 		04D34CAF1E21C6AF003DE180 /* UIAnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D34CAE1E21C6AF003DE180 /* UIAnimatedView.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0431B1FC1DDEFCAF007D7E5B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0431B1DF1DDEFCAF007D7E5B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0431B1E61DDEFCAF007D7E5B;
-			remoteInfo = TaikoController;
-		};
-		0431B2071DDEFCAF007D7E5B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0431B1DF1DDEFCAF007D7E5B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0431B1E61DDEFCAF007D7E5B;
-			remoteInfo = TaikoController;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0431B1E71DDEFCAF007D7E5B /* TaikoController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaikoController.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,12 +32,6 @@
 		0431B1F11DDEFCAF007D7E5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0431B1F41DDEFCAF007D7E5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0431B1F61DDEFCAF007D7E5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0431B1FB1DDEFCAF007D7E5B /* TaikoControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaikoControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0431B1FF1DDEFCAF007D7E5B /* TaikoControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaikoControllerTests.swift; sourceTree = "<group>"; };
-		0431B2011DDEFCAF007D7E5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0431B2061DDEFCAF007D7E5B /* TaikoControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaikoControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0431B20A1DDEFCAF007D7E5B /* TaikoControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaikoControllerUITests.swift; sourceTree = "<group>"; };
-		0431B20C1DDEFCAF007D7E5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0431B21C1DDEFD46007D7E5B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0431B21D1DDEFD46007D7E5B /* Peertalk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Peertalk.h; sourceTree = "<group>"; };
 		0431B21E1DDEFD46007D7E5B /* prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = "<group>"; };
@@ -94,20 +60,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0431B1F81DDEFCAF007D7E5B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0431B2031DDEFCAF007D7E5B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -115,8 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				0431B1E91DDEFCAF007D7E5B /* TaikoController */,
-				0431B1FE1DDEFCAF007D7E5B /* TaikoControllerTests */,
-				0431B2091DDEFCAF007D7E5B /* TaikoControllerUITests */,
 				0431B1E81DDEFCAF007D7E5B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,8 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				0431B1E71DDEFCAF007D7E5B /* TaikoController.app */,
-				0431B1FB1DDEFCAF007D7E5B /* TaikoControllerTests.xctest */,
-				0431B2061DDEFCAF007D7E5B /* TaikoControllerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,24 +99,6 @@
 				0431B22E1DDEFD92007D7E5B /* TaikoController-Bridging-Header.h */,
 			);
 			path = TaikoController;
-			sourceTree = "<group>";
-		};
-		0431B1FE1DDEFCAF007D7E5B /* TaikoControllerTests */ = {
-			isa = PBXGroup;
-			children = (
-				0431B1FF1DDEFCAF007D7E5B /* TaikoControllerTests.swift */,
-				0431B2011DDEFCAF007D7E5B /* Info.plist */,
-			);
-			path = TaikoControllerTests;
-			sourceTree = "<group>";
-		};
-		0431B2091DDEFCAF007D7E5B /* TaikoControllerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0431B20A1DDEFCAF007D7E5B /* TaikoControllerUITests.swift */,
-				0431B20C1DDEFCAF007D7E5B /* Info.plist */,
-			);
-			path = TaikoControllerUITests;
 			sourceTree = "<group>";
 		};
 		0431B21B1DDEFD46007D7E5B /* peertalk */ = {
@@ -208,42 +138,6 @@
 			productReference = 0431B1E71DDEFCAF007D7E5B /* TaikoController.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0431B1FA1DDEFCAF007D7E5B /* TaikoControllerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0431B2121DDEFCAF007D7E5B /* Build configuration list for PBXNativeTarget "TaikoControllerTests" */;
-			buildPhases = (
-				0431B1F71DDEFCAF007D7E5B /* Sources */,
-				0431B1F81DDEFCAF007D7E5B /* Frameworks */,
-				0431B1F91DDEFCAF007D7E5B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0431B1FD1DDEFCAF007D7E5B /* PBXTargetDependency */,
-			);
-			name = TaikoControllerTests;
-			productName = TaikoControllerTests;
-			productReference = 0431B1FB1DDEFCAF007D7E5B /* TaikoControllerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		0431B2051DDEFCAF007D7E5B /* TaikoControllerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0431B2151DDEFCAF007D7E5B /* Build configuration list for PBXNativeTarget "TaikoControllerUITests" */;
-			buildPhases = (
-				0431B2021DDEFCAF007D7E5B /* Sources */,
-				0431B2031DDEFCAF007D7E5B /* Frameworks */,
-				0431B2041DDEFCAF007D7E5B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0431B2081DDEFCAF007D7E5B /* PBXTargetDependency */,
-			);
-			name = TaikoControllerUITests;
-			productName = TaikoControllerUITests;
-			productReference = 0431B2061DDEFCAF007D7E5B /* TaikoControllerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -257,21 +151,8 @@
 					0431B1E61DDEFCAF007D7E5B = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 8LW2EYFXQD;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
-					};
-					0431B1FA1DDEFCAF007D7E5B = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = J97GRRCSX2;
-						LastSwiftMigration = 0800;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 0431B1E61DDEFCAF007D7E5B;
-					};
-					0431B2051DDEFCAF007D7E5B = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = J97GRRCSX2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 0431B1E61DDEFCAF007D7E5B;
 					};
 				};
 			};
@@ -289,8 +170,6 @@
 			projectRoot = "";
 			targets = (
 				0431B1E61DDEFCAF007D7E5B /* TaikoController */,
-				0431B1FA1DDEFCAF007D7E5B /* TaikoControllerTests */,
-				0431B2051DDEFCAF007D7E5B /* TaikoControllerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -303,21 +182,6 @@
 				0431B1F51DDEFCAF007D7E5B /* LaunchScreen.storyboard in Resources */,
 				0431B1F21DDEFCAF007D7E5B /* Assets.xcassets in Resources */,
 				0431B1F01DDEFCAF007D7E5B /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0431B1F91DDEFCAF007D7E5B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0431B2271DDEFD46007D7E5B /* Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0431B2041DDEFCAF007D7E5B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,44 +207,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0431B1F71DDEFCAF007D7E5B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0437E6E31DE69330003F3589 /* UICircularView.swift in Sources */,
-				0431B2001DDEFCAF007D7E5B /* TaikoControllerTests.swift in Sources */,
-				0431B2291DDEFD47007D7E5B /* PTChannel.m in Sources */,
-				04642C211DE06CF400FBF6BA /* SendCommand.m in Sources */,
-				0431B2341DDF15A7007D7E5B /* TaikoProtocol.swift in Sources */,
-				0431B22D1DDEFD47007D7E5B /* PTUSBHub.m in Sources */,
-				0431B22B1DDEFD47007D7E5B /* PTProtocol.m in Sources */,
-				0431B2311DDF08AC007D7E5B /* TaikoCommand.swift in Sources */,
-				04642C241DE1248500FBF6BA /* TouchDownRecognizer.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0431B2021DDEFCAF007D7E5B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0431B20B1DDEFCAF007D7E5B /* TaikoControllerUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0431B1FD1DDEFCAF007D7E5B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0431B1E61DDEFCAF007D7E5B /* TaikoController */;
-			targetProxy = 0431B1FC1DDEFCAF007D7E5B /* PBXContainerItemProxy */;
-		};
-		0431B2081DDEFCAF007D7E5B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0431B1E61DDEFCAF007D7E5B /* TaikoController */;
-			targetProxy = 0431B2071DDEFCAF007D7E5B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0431B1EE1DDEFCAF007D7E5B /* Main.storyboard */ = {
@@ -508,11 +335,12 @@
 				DEVELOPMENT_TEAM = 8LW2EYFXQD;
 				INFOPLIST_FILE = TaikoController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jaaaaaack.TaikoController;
+				PRODUCT_BUNDLE_IDENTIFIER = me.jack.TaikoController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TaikoController/TaikoController-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -525,73 +353,11 @@
 				DEVELOPMENT_TEAM = 8LW2EYFXQD;
 				INFOPLIST_FILE = TaikoController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jaaaaaack.TaikoController;
+				PRODUCT_BUNDLE_IDENTIFIER = me.jack.TaikoController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TaikoController/TaikoController-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		0431B2131DDEFCAF007D7E5B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = J97GRRCSX2;
-				INFOPLIST_FILE = TaikoControllerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jaaaaack.TaikoControllerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TaikoController/TaikoControllerTests-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaikoController.app/TaikoController";
-			};
-			name = Debug;
-		};
-		0431B2141DDEFCAF007D7E5B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = J97GRRCSX2;
-				INFOPLIST_FILE = TaikoControllerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jaaaaack.TaikoControllerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TaikoController/TaikoControllerTests-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaikoController.app/TaikoController";
-			};
-			name = Release;
-		};
-		0431B2161DDEFCAF007D7E5B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = J97GRRCSX2;
-				INFOPLIST_FILE = TaikoControllerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jaaaaack.TaikoControllerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = TaikoController;
-			};
-			name = Debug;
-		};
-		0431B2171DDEFCAF007D7E5B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = J97GRRCSX2;
-				INFOPLIST_FILE = TaikoControllerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jaaaaack.TaikoControllerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = TaikoController;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -612,24 +378,6 @@
 			buildConfigurations = (
 				0431B2101DDEFCAF007D7E5B /* Debug */,
 				0431B2111DDEFCAF007D7E5B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0431B2121DDEFCAF007D7E5B /* Build configuration list for PBXNativeTarget "TaikoControllerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0431B2131DDEFCAF007D7E5B /* Debug */,
-				0431B2141DDEFCAF007D7E5B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0431B2151DDEFCAF007D7E5B /* Build configuration list for PBXNativeTarget "TaikoControllerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0431B2161DDEFCAF007D7E5B /* Debug */,
-				0431B2171DDEFCAF007D7E5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
