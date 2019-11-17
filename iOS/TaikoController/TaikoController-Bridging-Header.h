@@ -9,7 +9,6 @@
 #ifndef TaikoController_Bridging_Header_h
 #define TaikoController_Bridging_Header_h
 
-
 #import "peertalk/PTChannel.h"
 #import "peertalk/PTProtocol.h"
 #import "peertalk/PTUSBHub.h"

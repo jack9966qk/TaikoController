@@ -16,13 +16,5 @@ class TouchDownRecognizer: UIGestureRecognizer {
         {
             self.state = .recognized
         }
-    }
-    
-//    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent) {
-//        self.state = .failed
-//    }
-//    
-//    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent) {
-//        self.state = .failed
-//    }
+    }    
 }

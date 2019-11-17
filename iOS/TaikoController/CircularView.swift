@@ -10,41 +10,32 @@ import Foundation
 import UIKit
 
 @IBDesignable
-class UICircularView : UIAnimatedView {
+class CircularView : AnimatedView {
     
     @IBInspectable var flip : Bool = false
     @IBInspectable var name : String = "CircularView"
     @IBInspectable var strokeColor : UIColor = UIColor.black
     
-    var shapeLayer = CAShapeLayer()
-//    var path = UIBezierPath()
-    
     var path: UIBezierPath {
         let rect = self.bounds
         let startAngle: CGFloat = 0.0
-        let endAngle: CGFloat = CGFloat(M_PI * 4)
+        let endAngle: CGFloat = CGFloat(Double.pi * 4)
 
-        if flip {
-            return UIBezierPath(
-                arcCenter: CGPoint(x: rect.maxX, y:rect.maxY/2),
-                radius: rect.maxX - rect.minX,
-                startAngle: startAngle,
-                endAngle: endAngle,
-                clockwise: true
-            )
-        } else {
-            return UIBezierPath(
-                arcCenter: CGPoint(x: rect.minX, y:rect.maxY/2),
-                radius: rect.maxX - rect.minX,
-                startAngle: startAngle,
-                endAngle: endAngle,
-                clockwise: true
-            )
-        }
+        let arcCenter = flip
+            ? CGPoint(x: rect.maxX, y:rect.maxY/2)
+            : CGPoint(x: rect.minX, y:rect.maxY/2)
+        return UIBezierPath(
+            arcCenter: arcCenter,
+            radius: rect.maxX - rect.minX,
+            startAngle: startAngle,
+            endAngle: endAngle,
+            clockwise: true
+        )
     }
     
     public func setupLayer() {
-        shapeLayer = CAShapeLayer()
+        self.layer.sublayers = nil
+        let shapeLayer = CAShapeLayer()
         shapeLayer.frame = self.bounds
         shapeLayer.path = self.path.cgPath
 
@@ -58,7 +49,10 @@ class UICircularView : UIAnimatedView {
         
         self.layer.addSublayer(strokeLayer)
     }
-    
+
+    override func layoutSubviews() {
+        self.setupLayer()
+    }
     
 //    override func draw(_ rect: CGRect) {
 //        print(rect)
@@ -98,9 +92,7 @@ class UICircularView : UIAnimatedView {
     
     
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
-        let outcome = path.contains(point) && self.layer.contains(point)
-//        print("\(name) point inside: \(outcome)")
-        return outcome
+        return path.contains(point) && self.layer.contains(point)
     }
     
 }

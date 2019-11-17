@@ -8,36 +8,23 @@
 
 import UIKit
 
-class TaikoViewController: UIViewController, PTChannelDelegate {
-    
+class TaikoViewController: UIViewController {
     let portnum = 2333
     var serverChannel : PTChannel?
     var peerChannel: PTChannel?
 
-    @IBOutlet weak var LDonView: UICircularView!
-    @IBOutlet weak var RDonView: UICircularView!
-    @IBOutlet weak var LKaView: UIAnimatedView!
-    @IBOutlet weak var RKaView: UIAnimatedView!
+    @IBOutlet weak var LDonView: CircularView!
+    @IBOutlet weak var RDonView: CircularView!
+    @IBOutlet weak var LKaView: AnimatedView!
+    @IBOutlet weak var RKaView: AnimatedView!
     
+    @IBOutlet weak var taikoWidthConstriant: NSLayoutConstraint!
+    @IBOutlet weak var taikoTopSpacingConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         setupChannel()
-        
-//        self.LDonView.passTo = self.LKaView
-//        self.RDonView.passTo = self.RKaView
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        self.LDonView.setupLayer()
-        self.RDonView.setupLayer()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     func setupChannel() {
@@ -66,10 +53,8 @@ class TaikoViewController: UIViewController, PTChannelDelegate {
                     print("command sent")
                 }
             }
-            
         }
     }
-    
     
     // MARK: Actions
     
@@ -101,17 +86,38 @@ class TaikoViewController: UIViewController, PTChannelDelegate {
         print("testhit")
     }
     
-    
-    @IBAction func buttonHit(_ sender: Any) {
-//        LDonView.backgroundColor = LDonView.backgroundColor == UIColor.red ? UIColor.green : UIColor.red
-//        RDonView.backgroundColor = RDonView.backgroundColor == UIColor.red ? UIColor.green : UIColor.red
-        LDonView.setupLayer()
-        RDonView.setupLayer()
+    @IBAction func moveTaikoUp(_ sender: Any) {
+        taikoTopSpacingConstraint.constant -= 50
+        UIView.animate(withDuration: 0.2) {
+            self.view.layoutIfNeeded()
+        }
     }
-    
-    
-    // MARK: PTChannelDelegate
-    
+
+    @IBAction func moveTaikoDown(_ sender: Any) {
+        taikoTopSpacingConstraint.constant += 50
+        UIView.animate(withDuration: 0.2) {
+            self.view.layoutIfNeeded()
+        }
+    }
+
+    @IBAction func makeTaikoLarger(_ sender: Any) {
+        taikoWidthConstriant.constant += 50
+        UIView.animate(withDuration: 0.2) {
+            self.view.layoutIfNeeded()
+        }
+    }
+
+    @IBAction func makeTaikoSmaller(_ sender: Any) {
+        taikoWidthConstriant.constant -= 50
+        UIView.animate(withDuration: 0.2) {
+            self.view.layoutIfNeeded()
+        }
+    }
+}
+
+// MARK: PTChannelDelegate
+
+extension TaikoViewController: PTChannelDelegate {
     public func ioFrameChannel(_ channel: PTChannel!, didReceiveFrameOfType type: UInt32, tag: UInt32, payload: PTData!) {
         return;
     }
@@ -122,9 +128,9 @@ class TaikoViewController: UIViewController, PTChannelDelegate {
     
     public func ioFrameChannel(_ channel: PTChannel!, didEndWithError error: Error!) {
         if let e = error {
-            print("\(channel) ended with error: \(e)")
+            print("\(channel!) ended with error: \(e)")
         } else {
-            print("Disconnected from \(channel.userInfo)")
+            print("Disconnected from \(String(describing: channel.userInfo))")
         }
     }
     
@@ -139,21 +145,8 @@ class TaikoViewController: UIViewController, PTChannelDelegate {
         // (owned by its parent dispatch queue) until they are closed.
         peerChannel = otherChannel
         peerChannel!.userInfo = address
-        print("Connected to \(address)")
+        print("Connected to \(address!)")
         
         return;
     }
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
