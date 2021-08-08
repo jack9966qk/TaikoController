@@ -1,7 +1,6 @@
 # taikolistener.py
 
 import usbmux
-import SocketServer
 import select
 from optparse import OptionParser
 import sys
