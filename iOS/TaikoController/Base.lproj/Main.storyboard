@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LFV-Jl-6jX">
     <device id="ipad12_9" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -61,11 +62,11 @@
                                 </constraints>
                             </stackView>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJm-12-y05" userLabel="Top Spacing View">
-                                <rect key="frame" x="20" y="0.0" width="1326" height="537.5"/>
+                                <rect key="frame" x="20" y="50" width="1326" height="491.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1E-cs-k0Q" customClass="TaikoStackView" customModule="TaikoController" customModuleProvider="target">
-                                <rect key="frame" x="85.5" y="537.5" width="1195" height="1195.5"/>
+                                <rect key="frame" x="85.5" y="541.5" width="1195" height="1195.5"/>
                                 <subviews>
                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SrY-s5-Ly0" userLabel="LDon" customClass="CircularView" customModule="TaikoController" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="597.5" height="1195.5"/>
@@ -120,44 +121,11 @@
                                     <constraint firstItem="Dur-ce-7GB" firstAttribute="height" secondItem="SrY-s5-Ly0" secondAttribute="height" id="ym9-Pn-W0Z"/>
                                 </constraints>
                             </stackView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LiD-Io-hOp">
-                                <rect key="frame" x="0.0" y="0.0" width="1366" height="50"/>
-                                <items>
-                                    <navigationItem id="JtD-W4-vUR">
-                                        <leftBarButtonItems>
-                                            <barButtonItem title="Up" id="Rb2-yd-yRC">
-                                                <connections>
-                                                    <action selector="moveTaikoUp:" destination="BYZ-38-t0r" id="aFj-q0-Qv9"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem title="Down" id="4v8-Qe-lLO">
-                                                <connections>
-                                                    <action selector="moveTaikoDown:" destination="BYZ-38-t0r" id="gsi-ca-606"/>
-                                                </connections>
-                                            </barButtonItem>
-                                        </leftBarButtonItems>
-                                        <rightBarButtonItems>
-                                            <barButtonItem title="Smaller" id="5wc-go-1u5">
-                                                <connections>
-                                                    <action selector="makeTaikoSmaller:" destination="BYZ-38-t0r" id="FEx-6W-oND"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem title="Larger" id="cTg-p0-otH">
-                                                <connections>
-                                                    <action selector="makeTaikoLarger:" destination="BYZ-38-t0r" id="FkF-a4-pqF"/>
-                                                </connections>
-                                            </barButtonItem>
-                                        </rightBarButtonItems>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="LiD-Io-hOp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0PE-dC-9Uz"/>
                             <constraint firstItem="28S-a3-mTI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2X2-OQ-8NC"/>
                             <constraint firstItem="M1E-cs-k0Q" firstAttribute="width" secondItem="28S-a3-mTI" secondAttribute="width" multiplier="0.875" id="2lC-pE-mHD"/>
-                            <constraint firstAttribute="trailing" secondItem="LiD-Io-hOp" secondAttribute="trailing" id="B4e-52-0LV"/>
                             <constraint firstItem="28S-a3-mTI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DcJ-Wv-9xS"/>
                             <constraint firstAttribute="trailing" secondItem="28S-a3-mTI" secondAttribute="trailing" id="LZ8-tm-epJ"/>
                             <constraint firstItem="M1E-cs-k0Q" firstAttribute="top" secondItem="fJm-12-y05" secondAttribute="bottom" id="SbJ-be-U0T"/>
@@ -166,17 +134,45 @@
                             <constraint firstAttribute="trailingMargin" secondItem="fJm-12-y05" secondAttribute="trailing" id="fM7-gn-6d0"/>
                             <constraint firstAttribute="bottom" secondItem="28S-a3-mTI" secondAttribute="bottom" id="mhl-dW-6IZ"/>
                             <constraint firstItem="fJm-12-y05" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ogy-mK-Ucu"/>
-                            <constraint firstItem="LiD-Io-hOp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rsK-IN-Ska"/>
-                            <constraint firstItem="fJm-12-y05" firstAttribute="height" secondItem="28S-a3-mTI" secondAttribute="height" multiplier="0.525" id="tBA-fV-X4q"/>
+                            <constraint firstItem="fJm-12-y05" firstAttribute="height" secondItem="28S-a3-mTI" secondAttribute="height" multiplier="0.48" id="tBA-fV-X4q"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Yi0-so-g1c">
+                        <leftBarButtonItems>
+                            <barButtonItem title="Up" id="Rb2-yd-yRC">
+                                <connections>
+                                    <action selector="moveTaikoUp:" destination="BYZ-38-t0r" id="aFj-q0-Qv9"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Down" id="4v8-Qe-lLO">
+                                <connections>
+                                    <action selector="moveTaikoDown:" destination="BYZ-38-t0r" id="gsi-ca-606"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Smaller" id="5wc-go-1u5">
+                                <connections>
+                                    <action selector="makeTaikoSmaller:" destination="BYZ-38-t0r" id="FEx-6W-oND"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Larger" id="cTg-p0-otH">
+                                <connections>
+                                    <action selector="makeTaikoLarger:" destination="BYZ-38-t0r" id="FkF-a4-pqF"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="ke6-cb-GnB">
+                            <connections>
+                                <segue destination="c5B-CM-bZV" kind="presentation" identifier="showSettings" id="o3p-Hp-rDX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <outlet property="LDonView" destination="SrY-s5-Ly0" id="1Yg-P1-VVg"/>
-                        <outlet property="LKaView" destination="CfS-Os-DHO" id="ulf-CV-LEG"/>
-                        <outlet property="RDonView" destination="Dur-ce-7GB" id="Vla-P0-WOG"/>
-                        <outlet property="RKaView" destination="YZr-lm-2Rm" id="WTw-fe-dk7"/>
+                        <outlet property="leftDonView" destination="SrY-s5-Ly0" id="1Yg-P1-VVg"/>
+                        <outlet property="leftKaView" destination="CfS-Os-DHO" id="ulf-CV-LEG"/>
+                        <outlet property="rightDonView" destination="Dur-ce-7GB" id="Vla-P0-WOG"/>
+                        <outlet property="rightKaView" destination="YZr-lm-2Rm" id="WTw-fe-dk7"/>
                         <outlet property="taikoTopSpacingConstraint" destination="tBA-fV-X4q" id="yaT-IA-PRy"/>
                         <outlet property="taikoWidthConstriant" destination="2lC-pE-mHD" id="pNG-YZ-UBe"/>
                     </connections>
@@ -203,7 +199,132 @@
                     </connections>
                 </gestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="830.16105417276719" y="138.28125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oNT-qL-ULc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LFV-Jl-6jX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="w3Z-bs-dTH">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HQh-4k-akK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yg7-gr-9Jd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="137.04245973645681" y="138.28125"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bcz-6Y-23u">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c5B-CM-bZV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="obI-Ft-avf">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="c2a-jx-GOk" kind="relationship" relationship="rootViewController" id="Arq-vK-WAr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E9f-Aa-xWH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1524.597364568082" y="137.6953125"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="2QD-pH-ubK">
+            <objects>
+                <tableViewController id="c2a-jx-GOk" customClass="TaikoSettingsController" customModule="TaikoController" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Trb-Zn-lZ5">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="984"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <sections>
+                            <tableViewSection id="pQt-QN-KIQ">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="WqP-bl-1dW">
+                                        <rect key="frame" x="20" y="18" width="664" height="51.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WqP-bl-1dW" id="Nlm-gf-W6W">
+                                            <rect key="frame" x="0.0" y="0.0" width="664" height="51.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDw-ry-GnS">
+                                                    <rect key="frame" x="16" y="9.5" width="129" height="33"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <state key="normal" title="Start Benchmark"/>
+                                                    <connections>
+                                                        <action selector="benchmarkButtonTapped:" destination="c2a-jx-GOk" eventType="touchUpInside" id="w2n-Hu-f5N"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eDw-ry-GnS" secondAttribute="trailing" constant="20" symbolic="YES" id="0Ej-O3-3AV"/>
+                                                <constraint firstItem="eDw-ry-GnS" firstAttribute="leading" secondItem="Nlm-gf-W6W" secondAttribute="leading" constant="16" id="Tib-hH-Q2z"/>
+                                                <constraint firstItem="eDw-ry-GnS" firstAttribute="centerY" secondItem="Nlm-gf-W6W" secondAttribute="centerY" id="qV3-Ax-xHJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Benchmark Result" id="7ZW-Vh-dKK">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="450" id="tIX-1c-FWA">
+                                        <rect key="frame" x="20" y="125.5" width="664" height="450"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tIX-1c-FWA" id="AVE-s1-ivO">
+                                            <rect key="frame" x="0.0" y="0.0" width="664" height="450"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Benchmark result which can be in multiple lines" translatesAutoresizingMaskIntoConstraints="NO" id="3xC-Um-nuE">
+                                                    <rect key="frame" x="16" y="15" width="632" height="420"/>
+                                                    <color key="textColor" systemColor="labelColor"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3xC-Um-nuE" secondAttribute="trailing" id="I7p-us-IVV"/>
+                                                <constraint firstItem="3xC-Um-nuE" firstAttribute="top" secondItem="AVE-s1-ivO" secondAttribute="topMargin" id="Koh-6V-v2e"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="3xC-Um-nuE" secondAttribute="bottom" id="gA6-no-lrx"/>
+                                                <constraint firstItem="3xC-Um-nuE" firstAttribute="leading" secondItem="AVE-s1-ivO" secondAttribute="leadingMargin" id="wzZ-UT-Acf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="c2a-jx-GOk" id="1sh-sr-bBI"/>
+                            <outlet property="delegate" destination="c2a-jx-GOk" id="Dt2-lh-ujP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="vsa-UY-ieD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="j2S-6t-Q7B">
+                            <connections>
+                                <segue destination="h8g-zI-UDG" kind="unwind" unwindAction="unwindFromSettingsWithUnwindSegue:" id="QrF-Rr-RgN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="benchmarkButton" destination="eDw-ry-GnS" id="YJp-i5-hMa"/>
+                        <outlet property="benchmarkResultTextView" destination="3xC-Um-nuE" id="ADa-PB-STF"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M7A-0o-KNi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="h8g-zI-UDG" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2197.9502196193262" y="137.6953125"/>
+        </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

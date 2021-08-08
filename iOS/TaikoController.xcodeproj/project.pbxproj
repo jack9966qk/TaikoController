@@ -21,6 +21,9 @@
 		04642C201DE06CF400FBF6BA /* SendCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 04642C1F1DE06CF400FBF6BA /* SendCommand.m */; };
 		04642C231DE1248500FBF6BA /* TouchDownRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04642C221DE1248500FBF6BA /* TouchDownRecognizer.swift */; };
 		04D34CAF1E21C6AF003DE180 /* AnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D34CAE1E21C6AF003DE180 /* AnimatedView.swift */; };
+		961F134D26BFBFCD003575DC /* TaikoSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F134C26BFBFCD003575DC /* TaikoSettingsController.swift */; };
+		961F135026BFC2DF003575DC /* TaikoConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961F134F26BFC2DF003575DC /* TaikoConnection.swift */; };
+		962A179F26BFD33500AE9BE3 /* TaikoBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962A179E26BFD33500AE9BE3 /* TaikoBenchmark.swift */; };
 		967853D226BE9A2B00D50BF3 /* TaikoStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967853D126BE9A2B00D50BF3 /* TaikoStackView.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +52,10 @@
 		04642C1F1DE06CF400FBF6BA /* SendCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendCommand.m; sourceTree = "<group>"; };
 		04642C221DE1248500FBF6BA /* TouchDownRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchDownRecognizer.swift; sourceTree = "<group>"; };
 		04D34CAE1E21C6AF003DE180 /* AnimatedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedView.swift; sourceTree = "<group>"; };
-		967853D126BE9A2B00D50BF3 /* TaikoStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaikoStackView.swift; path = TaikoController/TaikoStackView.swift; sourceTree = "<group>"; };
+		961F134C26BFBFCD003575DC /* TaikoSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaikoSettingsController.swift; sourceTree = "<group>"; };
+		961F134F26BFC2DF003575DC /* TaikoConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaikoConnection.swift; sourceTree = "<group>"; };
+		962A179E26BFD33500AE9BE3 /* TaikoBenchmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaikoBenchmark.swift; sourceTree = "<group>"; };
+		967853D126BE9A2B00D50BF3 /* TaikoStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaikoStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +72,6 @@
 		0431B1DE1DDEFCAF007D7E5B = {
 			isa = PBXGroup;
 			children = (
-				967853D126BE9A2B00D50BF3 /* TaikoStackView.swift */,
 				0431B1E91DDEFCAF007D7E5B /* TaikoController */,
 				0431B1E81DDEFCAF007D7E5B /* Products */,
 			);
@@ -84,11 +89,15 @@
 			isa = PBXGroup;
 			children = (
 				0431B21B1DDEFD46007D7E5B /* peertalk */,
+				961F134F26BFC2DF003575DC /* TaikoConnection.swift */,
+				967853D126BE9A2B00D50BF3 /* TaikoStackView.swift */,
 				0431B1EA1DDEFCAF007D7E5B /* AppDelegate.swift */,
 				0431B22F1DDF08AC007D7E5B /* TaikoCommand.swift */,
 				0431B2321DDF15A7007D7E5B /* TaikoProtocol.swift */,
 				04642C1F1DE06CF400FBF6BA /* SendCommand.m */,
 				0431B1EC1DDEFCAF007D7E5B /* TaikoViewController.swift */,
+				961F134C26BFBFCD003575DC /* TaikoSettingsController.swift */,
+				962A179E26BFD33500AE9BE3 /* TaikoBenchmark.swift */,
 				0437E6E11DE69330003F3589 /* CircularView.swift */,
 				04D34CAE1E21C6AF003DE180 /* AnimatedView.swift */,
 				0431B1EE1DDEFCAF007D7E5B /* Main.storyboard */,
@@ -195,6 +204,8 @@
 			files = (
 				0431B1ED1DDEFCAF007D7E5B /* TaikoViewController.swift in Sources */,
 				0437E6E21DE69330003F3589 /* CircularView.swift in Sources */,
+				961F135026BFC2DF003575DC /* TaikoConnection.swift in Sources */,
+				962A179F26BFD33500AE9BE3 /* TaikoBenchmark.swift in Sources */,
 				04642C201DE06CF400FBF6BA /* SendCommand.m in Sources */,
 				0431B22A1DDEFD47007D7E5B /* PTProtocol.m in Sources */,
 				04642C231DE1248500FBF6BA /* TouchDownRecognizer.swift in Sources */,
@@ -205,6 +216,7 @@
 				0431B22C1DDEFD47007D7E5B /* PTUSBHub.m in Sources */,
 				0431B1EB1DDEFCAF007D7E5B /* AppDelegate.swift in Sources */,
 				0431B2331DDF15A7007D7E5B /* TaikoProtocol.swift in Sources */,
+				961F134D26BFBFCD003575DC /* TaikoSettingsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
