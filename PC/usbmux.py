@@ -44,10 +44,10 @@ class SafeStreamSocket:
 				raise MuxError("socket connection broken")
 			totalsent = totalsent + sent
 	def recv(self, size):
-		msg = ''
+		msg = b''
 		while len(msg) < size:
 			chunk = self.sock.recv(size-len(msg))
-			if chunk == '':
+			if chunk == b'':
 				raise MuxError("socket connection broken")
 			msg = msg + chunk
 		return msg
@@ -74,9 +74,9 @@ class BinaryProtocol(object):
 
 	def _pack(self, req, payload):
 		if req == self.TYPE_CONNECT:
-			return struct.pack("IH", payload['DeviceID'], payload['PortNumber']) + "\x00\x00"
+			return struct.pack("IH", payload['DeviceID'], payload['PortNumber']) + b"\x00\x00"
 		elif req == self.TYPE_LISTEN:
-			return ""
+			return b""
 		else:
 			raise ValueError("Invalid outgoing request type %d"%req)
 	
@@ -91,7 +91,7 @@ class BinaryProtocol(object):
 			devid = struct.unpack("I", payload)[0]
 			return {'DeviceID': devid}
 		else:
-			raise MuxError("Invalid incoming request type %d"%req)
+			raise MuxError("Invalid incoming request type")
 
 	def sendpacket(self, req, tag, payload={}):
 		payload = self._pack(req, payload)
@@ -137,12 +137,18 @@ class PlistProtocol(BinaryProtocol):
 			req = [self.TYPE_CONNECT, self.TYPE_LISTEN][req-2]
 		payload['MessageType'] = req
 		payload['ProgName'] = 'tcprelay'
-		BinaryProtocol.sendpacket(self, self.TYPE_PLIST, tag, plistlib.writePlistToString(payload))
+		if sys.version_info[0] > 2:
+			BinaryProtocol.sendpacket(self, self.TYPE_PLIST, tag, plistlib.dumps(payload))
+		else:
+			BinaryProtocol.sendpacket(self, self.TYPE_PLIST, tag, plistlib.writePlistToString(payload))
 	def getpacket(self):
 		resp, tag, payload = BinaryProtocol.getpacket(self)
 		if resp != self.TYPE_PLIST:
 			raise MuxError("Received non-plist type %d"%resp)
-		payload = plistlib.readPlistFromString(payload)
+		if sys.version_info[0] > 2:
+			payload = plistlib.loads(payload)
+		else:
+			payload = plistlib.readPlistFromString(payload)
 		return payload['MessageType'], tag, payload
 
 class MuxConnection(object):
