@@ -12,3 +12,8 @@ iOS multi-touch controller and a receiver script, connected via USB.
 ## Todo
 
 More detailed description
+
+## Acknowledgement
+
+* [PeerTalk](https://github.com/rsms/peertalk)
+* [usbmuxd](https://github.com/TestStudio/usbmuxd)
