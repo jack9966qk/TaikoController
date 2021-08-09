@@ -12,7 +12,6 @@
 #import "peertalk/PTChannel.h"
 #import "peertalk/PTProtocol.h"
 #import "peertalk/PTUSBHub.h"
-#import "SendCommand.m"
 #include <stdint.h>
 
 #endif /* TaikoController_Bridging_Header_h */

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum TaikoCommand : UInt8 {
+enum TaikoCommand : UInt32 {
     case LeftDon = 1
     case RightDon
     case LeftKa

@@ -52,14 +52,18 @@ class TaikoConnection: NSObject {
 		peerChannel?.close()
 	}
 
+	private var currentTimestampData: __DispatchData {
+		let now = Date().timeIntervalSince1970
+		return withUnsafeBytes(of: now) { bytes in
+			DispatchData(bytes: bytes) as __DispatchData
+		}
+	}
+
 	func sendCommand(command: TaikoCommand) {
 		guard let peerCh = peerChannel else { return }
-		var value = command.rawValue
-		let ptr = UnsafeBufferPointer<UInt8>(start: &value, count: 1)
-		let payload = DispatchData(bytes: ptr) as __DispatchData
 		peerCh.sendFrame(ofType: TaikoMessageType.Command.rawValue,
-						 tag: PTFrameNoTag,
-						 withPayload: payload) { error in
+						 tag: command.rawValue,
+						 withPayload: currentTimestampData) { error in
 			if let e = error {
 				print("error while sending command: \(e)")
 			} else {
@@ -72,17 +76,31 @@ class TaikoConnection: NSObject {
 // MARK: PTChannelDelegate
 
 extension TaikoConnection: PTChannelDelegate {
-	public func ioFrameChannel(_ channel: PTChannel!, didReceiveFrameOfType type: UInt32, tag: UInt32, payload: PTData!) {
-		print("Received frame of type \(type) and tag \(tag), payload length: \(payload.length)")
+	public func ioFrameChannel(_ channel: PTChannel!,
+							   didReceiveFrameOfType type: UInt32,
+							   tag: UInt32,
+							   payload: PTData?) {
+		print("Received frame of type \(type) and tag \(tag), payload length: \(payload?.length ?? 0)")
+		if (type == TaikoMessageType.TimeSync.rawValue) {
+			guard let peerCh = peerChannel else { return }
+			peerCh.sendFrame(ofType: TaikoMessageType.TimeSync.rawValue,
+							 tag: PTFrameNoTag,
+							 withPayload: currentTimestampData,
+							 callback: nil)
+		}
 		self.delegate?.taikoConnectionReceived(self)
 		return;
 	}
 	
-	public func ioFrameChannel(_ channel: PTChannel!, shouldAcceptFrameOfType type: UInt32, tag: UInt32, payloadSize: UInt32) -> Bool {
+	public func ioFrameChannel(_ channel: PTChannel!,
+							   shouldAcceptFrameOfType type: UInt32,
+							   tag: UInt32,
+							   payloadSize: UInt32) -> Bool {
 		return true;
 	}
 	
-	public func ioFrameChannel(_ channel: PTChannel!, didEndWithError error: Error!) {
+	public func ioFrameChannel(_ channel: PTChannel!,
+							   didEndWithError error: Error!) {
 		if channel === serverChannel {
 			serverChannel = nil
 			print("Stopped listening")
@@ -101,7 +119,9 @@ extension TaikoConnection: PTChannelDelegate {
 	
 	// For listening channels, this method is invoked when a new connection has been
 	// accepted.
-	public func ioFrameChannel(_ channel: PTChannel!, didAcceptConnection otherChannel: PTChannel!, from address: PTAddress!) {
+	public func ioFrameChannel(_ channel: PTChannel!,
+							   didAcceptConnection otherChannel: PTChannel!,
+							   from address: PTAddress!) {
 		// Cancel any other connection. We are FIFO, so the last connection
 		// established will cancel any previous connection and "take its place".
 		peerChannel?.cancel()

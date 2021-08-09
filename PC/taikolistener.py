@@ -1,15 +1,11 @@
 # taikolistener.py
 
-import usbmux
 import threading
-import struct
-import binascii
-import pyautogui
+from peerTalkThread import PeerTalkThread, readPeerTalkHeader
 import ctypes
 import time
 import six
 
-pyautogui.PAUSE = 0
 locks = {}
 locks[0x21] = threading.Lock()
 locks[0x24] = threading.Lock()
@@ -20,8 +16,6 @@ keysDown[0x21] = False
 keysDown[0x24] = False
 keysDown[0x20] = False
 keysDown[0x25] = False
-
-SendInput = ctypes.windll.user32.SendInput
 
 # C struct redefinitions
 PUL = ctypes.POINTER(ctypes.c_ulong)
@@ -89,34 +83,6 @@ def process_command(command):
 		press(0x25)
 		# pyautogui.press("k")
 
-class PeerTalkThread(threading.Thread):
-	def __init__(self,*args):
-		self._psock = args[0]
-		self._running = True
-		threading.Thread.__init__(self)
-
-	def run(self):
-		framestructure = struct.Struct("! I I I I")
-		print("listening to commands")
-		while self._running:
-			try:
-				msg = self._psock.recv(16)	# frame header
-				if len(msg) > 0:
-					frame = framestructure.unpack(msg)
-					# print("frame: ", frame)
-					size = frame[3]			# get size of payload?
-					msgdata = self._psock.recv(size)	# receive payload?
-					if msgdata:
-						command = binascii.hexlify(msgdata)
-						process_command(int(command))
-					else:
-						print("No data")
-			except:
-				pass
-
-	def stop(self):
-		self._running = False
-
 def press(keycode):
 		locks[keycode].acquire()
 		# print("acquired lock for", keycode)
@@ -148,25 +114,14 @@ class KeyStrokeThread(threading.Thread):
 	def stop(self):
 		self._running = False
 
+def onReceive(header, payload, psock, timeOffset):
+	unpackedHeader = readPeerTalkHeader(header)
+	command = unpackedHeader.tag
+	print("received commnad", command)
+	process_command(command)
 
-print("starting...")
-mux = usbmux.USBMux()
-
-print("Waiting for devices...")
-if not mux.devices:
-    mux.process()	# search for devices with timeout=1.0?
-if not mux.devices:
-    print("No device found")
-
-dev = mux.devices[0]	# get device found
-print("connecting to device %s" % str(dev))
-psock = mux.connect(dev, 2333)	# connect to device with port 2333
-psock.setblocking(0)	# set to non-block
-psock.settimeout(2)		# set timeout = 2
-
-
-ptthread = PeerTalkThread(psock)
-ptthread.start()
+ptThread = PeerTalkThread(onReceive)
+ptThread.start()
 
 ldon = KeyStrokeThread(0x21)
 ldon.start()
@@ -184,9 +139,8 @@ six.moves.input("press enter to exit")
 print("exiting...")
 
 # end connection and quit
-ptthread.stop()
-ptthread.join()
-psock.close()
+ptThread.stop()
+ptThread.join()
 
 for p in [ldon, rdon, lka, rka]:
 	p.stop()

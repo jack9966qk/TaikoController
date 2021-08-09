@@ -10,4 +10,5 @@ import Foundation
 
 public enum TaikoMessageType: UInt32 {
     case Command = 1
+	case TimeSync
 }

@@ -24,7 +24,7 @@ class TaikoBenchmark {
 	private var sendTime: [Int: TimeInterval] = [:]
 	private var receiveTime: [Int: TimeInterval] = [:]
 	var onComplete: ((String) -> ())?
-	let numCommands = 1000
+	let numCommands = 500
 	
 	func start(sendCommand: (TaikoCommand) -> (), shortPause: () -> ()) {
 		sendTime.removeAll()
@@ -37,9 +37,9 @@ class TaikoBenchmark {
 			sendTime[sendCounter.next()] = Date().timeIntervalSince1970
 			sendCommand(cmd)
 			if Double.random(in: 0...1) > 0.15 {
-				Thread.sleep(forTimeInterval: Double.random(in: 0.04...0.06))
+				Thread.sleep(forTimeInterval: Double.random(in: 0.02...0.04))
 			} else {
-				Thread.sleep(forTimeInterval: Double.random(in: 0.1...0.3))
+				Thread.sleep(forTimeInterval: Double.random(in: 0.1...0.2))
 				shortPause()
 			}
 		}
@@ -57,9 +57,20 @@ class TaikoBenchmark {
 		}
 	}
 
-	private func avg<C: Collection>(_ collection: C) -> Double
+	private func avg<C: Collection>(_ collection: C) -> Double?
 	where C.Element == Double {
-		collection.reduce(0.0, +) / Double(collection.count)
+		if collection.count == 0 { return nil }
+		return collection.reduce(0.0, +) / Double(collection.count)
+	}
+	
+	private func stddev<C: Collection>(_ collection: C) -> Double?
+	where C.Element == Double {
+		if collection.count == 0 { return nil }
+		guard let mean = avg(collection) else { return nil }
+		let sum = collection
+			.map { pow($0 - mean, 2) }
+			.reduce(0.0, +)
+		return sqrt(sum / Double(collection.count))
 	}
 
 	private var summary: String {
@@ -69,8 +80,12 @@ class TaikoBenchmark {
 		let splitIdx = min(Int(Double(numCommands) * 0.99), numCommands - 1)
 		let delaysInMs99 = delaysInMs[..<splitIdx]
 		return """
-			Average: \(avg(delaysInMs))
-			Average lowest 99%: \(avg(delaysInMs99))
+			Stats (round trip time in ms):
+			Max: \(delaysInMs.max()!)
+			Min: \(delaysInMs.min()!)
+			Average: \(avg(delaysInMs)!)
+			Stddev: \(stddev(delaysInMs)!)
+			Average lowest 99%: \(avg(delaysInMs99)!)
 		"""
 	}
 }

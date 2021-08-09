@@ -97,7 +97,7 @@ extension TaikoSettingsController: TaikoConnectionDelegate {
 	}
 	
 	func taikoConnectionEnded(_ connection: TaikoConnection, error: Error?) {
-		benchmarkResultTextView.text = "Disconneted"
+		appendToResults("\nDisconneted")
 		benchmarkButton.isEnabled = false
 	}
 }
